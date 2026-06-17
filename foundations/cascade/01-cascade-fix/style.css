@@ -8,16 +8,32 @@ body {
   font-weight: 800;
 }
 
-.small-para {
+/* Initially, para was before small-para, so I'm
+assuming order is the rule for cascade here. 
+I'll change order and check if it fixes it. */
+
+/* .small-para {
   font-size: 14px;
   font-weight: 800;
 }
 
 .para {
   font-size: 22px;
+} */
+
+.para {
+  font-size: 22px;
 }
 
-.confirm {
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Again seems to be a matter of which is later.
+Let's change order and see what happens. */
+
+/* .confirm {
   background: green;
   color: white;
   font-weight: bold;
@@ -27,9 +43,25 @@ body {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 20px;
+} */
+
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
-.child {
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+} 
+
+/*Second one, chaining selector. Make first one 
+chaining selector as well. Also place first one
+later.*/
+
+/* .child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
@@ -39,4 +71,18 @@ div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+} */
+
+div.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
 }
+
+div.child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* Solution has other useful strategies. */
