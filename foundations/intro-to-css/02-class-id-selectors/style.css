@@ -1,1 +1,26 @@
-/* Add CSS Styling */
+.odd {
+    /* solution used rgb here, so changed */
+    /* background-color: #ffb6c1; */
+    background-color: rgb(255, 167, 167);
+    /* Changed, initially 'DejaVu Sans', made it "DejaVu Sans" for consistency with solution */
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+/* Applied adjust-font-size, single property font-size 24px, for both elements 3, 4. Saves space, no need for separate
+selectors for 3 and 4*/
+.adjust-font-size {
+    font-size: 24px;
+}
+
+#two {
+    color: #0000ff;
+    font-size: 36px;
+}
+
+/* Solution used hsl, not hex, in background color */
+#four {
+    /* background-color: #90ee90; */
+    background-color: hsl(120, 100%, 75%);
+    font-size: 24px;
+    font-weight: bold;
+}
