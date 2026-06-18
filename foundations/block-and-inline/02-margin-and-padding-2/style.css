@@ -3,25 +3,44 @@ body {
   font-family: sans-serif;
 }
 
+/* First, set padding so card is separated from body */
 .card {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  padding: 8px;
 }
 
+/* by default root font size = 16px (i.e. body font size), h1 font size = 2em = 2 * root font size = 32px,
+and line-height: normal makes it 1.1 to 1.2 times that i.e. 35 to 38 (on my browser, 36). thus, title = 400 * 36
+(content). No padding, no border by default, but margin-block-start = 0.67em (this time relative to element font 
+size), same for margin-block-end i.e. margin-top = 21.44 and margin-bottom = 21.44 by default. */
+
+/* then, margin-bottom for title, so distance between it and content is 8px (1/2 of content font size). */
 .title {
   background: #e3f4ff;
+  margin-bottom: 8px;
+  font-size: 16px; /* to match content font size */
+  padding: 8px; /* standard */
 }
 
+/* similar margin and padding things for other elements */
 .content {
   background: #e3f4ff;
+  margin-bottom: 8px; /* same as title margin */
+  padding: 16px 8px; /* standard; bigger padding from top and bottom */
 }
 
 .button-container {
   background: #e3f4ff;
+  text-align: center; /* to bring text to center of div */
+  padding: 8px;
 }
 
 button {
   background: white;
   border: 1px solid #eee;
+  display: block; /* bring button onto next line */
+  margin: 0 auto; /* bring to center */
+  padding: 8px 24px; /* standard; bigger padding left and right */
 }
