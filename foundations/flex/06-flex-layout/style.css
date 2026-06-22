@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /* stacks header, content, and footer vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +19,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* add padding */
+  padding: 8px 16px;
 }
 
 input {
@@ -23,4 +28,47 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+.content {
+  /* pushes footer to bottom by making body take up all available space between header and footer */
+  flex: 1; 
+  /* everything centered (within content); horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* gap */
+  gap: 16px;
+}
+
+a {
+  /* links grey */
+  color: #666;
+  /* no underline */
+  text-decoration: none;
+}
+
+.header, .footer {
+  /* horizontal; About, Store still vertically stacked etc */
+  display: flex;
+  /* right links thrown to side */
+  justify-content: space-between;
+  /* padding maintained */
+  padding: 16px;
+}
+
+.footer {
+  background: #eee;
+}
+
+ul {
+  /* About, Store horizontally stacked etc */
+  display: flex;
+  /* bullets removed */
+  list-style: none;
+  margin: 0;
+  /* extra ul padding removed */
+  padding: 0;
+  gap: 16px;
 }

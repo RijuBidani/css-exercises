@@ -2,12 +2,30 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  /* necessary to stick footer at bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  /* stick footer at bottom */
+  flex: 1; 
+  /* divs sidebar; container horizontally stacked */
+  display: flex;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  display: flex;
+  /* text vertically centered */
+  align-items: center;
+  /* horizontally padded relative to viewport */
+  padding: 0 16px;
+  /* large, bold text */
+  font-size: 32px;
+  font-weight: 900;
 }
 
 .footer {
@@ -20,10 +38,49 @@ body {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  /* sidebar shouldn't shrink */
+  flex-shrink: 0;
+  /* as required, padding */
+  padding: 16px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  padding: 16px;
+  width: 300px;
+}
+
+ul {
+  list-style-type: none;
+  /* remove default margin, padding */
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.container {
+  /* cards spaced from top and bottom of container box */
+  padding: 48px;
+  /* arranged horizontally */
+  display: flex;
+  /* wrapped */
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

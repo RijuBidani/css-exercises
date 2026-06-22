@@ -15,13 +15,40 @@ body {
   justify-content: center;
 }
 
+/* all below apply to header as well as button */
+/* display: flex lines up header and close button
+horizontally */
+/* align-items: center lines up header text
+with close button */
+/* justify-content: space-between throws 
+close button to right, as expected */
+.header {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* first, display: flex on entire modal */
+/* Icon horizontally before everything else;
+actually works considering we need icon to left 
+of everything */
+/* gap: 16px (vertical right now) */
+/* padding necessary for modal */
 .modal {
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
 }
 
+/* icon initially being smashed by text;
+now flex-shrink to make sure it doesn't shrink */
 .icon {
   color: royalblue;
   font-size: 26px;
@@ -33,6 +60,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -48,6 +76,10 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 button {
